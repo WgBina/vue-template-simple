@@ -10,32 +10,34 @@
         :active-text-color="variables.menuActiveText"
         :unique-opened="false"
         :collapse-transition="false"
+        :router="true"
         mode="vertical"
       >
-        <sidebar-item
-          v-for="route in permission_routes"
-          :key="route.path"
-          :item="route"
-          :base-path="route.path"
-        />
+        <el-menu-item index="/test1">
+          <i class="el-icon-menu" />
+          <span slot="title">导航一</span>
+        </el-menu-item>
+
+        <el-menu-item index="/test2">
+          <i class="el-icon-menu" />
+          <span slot="title">导航二</span>
+        </el-menu-item>
+
       </el-menu>
     </el-scrollbar>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 import Logo from './Logo'
-import SidebarItem from './SidebarItem'
+
 import variables from '@/styles/variables.scss'
 
 export default {
   components: {
-    SidebarItem,
     Logo
   },
   computed: {
-    ...mapGetters(['permission_routes']),
     activeMenu() {
       // highlight the path
 

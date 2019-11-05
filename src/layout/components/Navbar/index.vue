@@ -18,9 +18,9 @@
 export default {
   methods: {
     logOutHandle() {
-      this.$store.dispatch('user/logOut').then(() => {
-        this.$router.push('/index')
-      })
+      // this.$store.dispatch('user/logOut').then(() => {
+      //   this.$router.push('/index')
+      // })
     }
   }
 }

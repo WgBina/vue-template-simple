@@ -19,64 +19,46 @@ import Layout from '@/layout'
  * a base page that does not have permission requirements
  * all roles can be accessed
  */
-export const constantRoutes = [
-  {
-    path: '/login',
-    component: () => import('@/views/login/index'),
-    hidden: true
-  },
-  {
-    path: '/',
-    name: 'Layout',
-    component: Layout,
-    redirect: '/test1',
-    meta: { title: 'head1', icon: 'link' },
-    children: [
-      {
-        path: 'test1',
-        component: () => import('@/views/test1'),
-        name: 'test1',
-        meta: { title: 'test1', icon: 'link' },
-        children: [
-          {
-            path: 'test3',
-            component: () => import('@/views/test2'),
-            name: 'test3',
-            meta: { title: 'test3', icon: 'link', activeMenu: '/test1' },
-            hidden: true
-          }
-        ]
-      },
-      {
-        path: 'test2',
-        component: () => import('@/views/test2'),
-        name: 'test2',
-        meta: { title: 'test2', icon: 'link' }
-      }
-    ]
-  }
-
-  // 404 page must be placed at the end !!!
-  // { path: '*', redirect: '/404', hidden: true }
-]
-
-/**
- * asyncRoutes
- * the routes that need to be dynamically loaded based on user roles
- */
-
-export const asyncRoutes = []
-
-const createRouter = () =>
-  new Router({
-    routes: constantRoutes
-  })
-
-const router = createRouter()
-
-export function resetRouter() {
-  const newRouter = createRouter()
-  router.matcher = newRouter.matcher // reset router
-}
+const router = new Router({
+  routes: [
+    {
+      path: '/login',
+      component: () => import('@/views/login/index'),
+      hidden: true
+    },
+    {
+      path: '/',
+      name: 'Layout',
+      component: Layout,
+      redirect: '/test1',
+      meta: { title: 'head1', icon: 'link' },
+      children: [
+        {
+          path: 'test1',
+          component: () => import('@/views/test1'),
+          name: 'test1',
+          meta: { title: 'test1', icon: 'link' },
+          children: [
+            {
+              path: 'test3',
+              component: () => import('@/views/test2'),
+              name: 'test3',
+              meta: { title: 'test3', icon: 'link', activeMenu: '/test1' },
+              hidden: true
+            }
+          ]
+        },
+        {
+          path: 'test2',
+          component: () => import('@/views/test2'),
+          name: 'test2',
+          meta: { title: 'test2', icon: 'link' }
+        }
+      ]
+    }
+    // 404 page must be placed at the end !!!
+    // { path: '*', redirect: '/404', hidden: true }
+  ]
+})
 
 export default router
