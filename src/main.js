@@ -8,7 +8,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import './styles/index.scss' // global css
 
 import App from './App'
-import store from './store'
+// import store from './store'
 import router from './router'
 
 import './permission' // permission control
@@ -20,7 +20,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  store,
+  // store,
   components: { App },
   template: '<App/>'
 })
