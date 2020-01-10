@@ -19,9 +19,69 @@
     border-radius:4px;
 
     background: #fff;
+    .box-img {
+      margin: 0 auto;
+    }
     .box-input{
       height: 200px;
+
+      .inner-input {
+        width: 280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        i{
+          margin-right: 5px;
+          margin-top: 4px;
+        }
+        .forget-psd{
+          width: 100%;
+          text-align: right;
+          font-size: 10px;
+          color: $headFontColor;
+          margin-top: -10px;
+          cursor: pointer;
+        }
+        .get-phone-code{
+          font-size: 14px;
+          width:97px;
+          height:32px;
+          background:#FFFFFF;
+          border-radius:2px;
+          text-align: center;
+          line-height: 32px;
+          font-family:PingFangSC-Medium;
+          border: none;
+          color: #fff;
+          background:$mainColor;
+          margin-left: 23px;
+
+          cursor: pointer;
+          font-weight:400;
+          margin-top: -4px;
+        }
+      }
     }
+    .box-btn{
+      .btn-login{
+        margin:0 auto;
+        display:block;
+        width: 96px;
+        height: 28px;
+
+        text-align: center;
+        line-height: 28px;
+
+        background: $mainColor;
+        border-radius:16px;
+        color: #fff;
+        font-size: 16px;
+      }
+    }
+
+
+
     .btn-back{
       position: absolute;
       left: 15px;
@@ -29,40 +89,6 @@
       font-size: 14px;
       color: $headFontColor;
       cursor: pointer;
-    }
-    .inner-input {
-      width: 280px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-
-      .forget-psd{
-        width: 100%;
-        text-align: right;
-        font-size: 10px;
-        color: $headFontColor;
-        margin-top: -10px;
-        cursor: pointer;
-      }
-      .get-phone-code{
-        font-size: 14px;
-        width:97px;
-        height:32px;
-        background:#FFFFFF;
-        border-radius:2px;
-        text-align: center;
-        line-height: 32px;
-        font-family:PingFangSC-Medium;
-        border: none;
-        color: #fff;
-        background:$mainColor;
-        margin-left: 23px;
-
-        cursor: pointer;
-        font-weight:400;
-        margin-top: -4px;
-      }
     }
 
     ::-webkit-input-placeholder { /* WebKit browsers */
@@ -86,9 +112,7 @@
 }
 
 
-.box-img {
-  margin: 0 auto;
-}
+
 .inner-line {
   // 横向对齐
   // display: flex;
@@ -100,23 +124,9 @@
   font-size: 16px;
   // margin: 15px 30px 15px 0;
   color: #2f4f4f;
+  margin-right: 6px;
   // display: inline-block;
 }
-.btn-login{
-  margin:0 auto;
-  display:block;
-  width: 96px;
-  height: 28px;
-
-  text-align: center;
-  line-height: 28px;
-
-  background: $mainColor;
-  border-radius:16px;
-  color: #fff;
-  font-size: 16px;
-}
-
 
 input {
   // width: 240px;
