@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import { setToken, setRoles } from '@/utils/auth'
+import { setToken } from '@/utils/auth'
 export default {
   name: 'Login',
 
@@ -95,7 +95,6 @@ export default {
     */
     loginHandle() {
       setToken(['admin'])
-      setRoles(['null'])
       this.$router.push('/')
     },
     forgetPswHandle() {

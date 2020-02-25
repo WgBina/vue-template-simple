@@ -15,12 +15,13 @@
 </template>
 
 <script>
+import { removeToken } from '@/utils/auth' // get token from cookie
+
 export default {
   methods: {
     logOutHandle() {
-      // this.$store.dispatch('user/logOut').then(() => {
-      //   this.$router.push('/index')
-      // })
+      removeToken()
+      this.$router.push('/index')
     }
   }
 }
