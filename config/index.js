@@ -2,14 +2,17 @@
 // Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.
 
+
 const path = require('path')
+const path_name  =require('../src/utils/buildPathName')
+console.log(path_name)
 
 module.exports = {
   dev: {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
     proxyTable: {},
 
     // Various Dev Server settings
@@ -44,6 +47,9 @@ module.exports = {
   },
 
   build: {
+    // 添加生产、测试、开发环境配置
+    prodEnv: require('./prod.env'),
+    testEnv: require('./test.env'),
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
 
