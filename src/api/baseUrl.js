@@ -4,7 +4,7 @@
 */
 
 let baseURL = ''
-console.log(process.env)
+// console.log(process.env)
 if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'development') {
   baseURL = 'http://bigdata.colourdata.com.cn:81/Michelin-Engineer'
 }

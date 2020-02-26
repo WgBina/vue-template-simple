@@ -5,7 +5,7 @@
 
 let build_path = ''
 let sub_build_path = ''
-console.log(process.env)
+// console.log(process.env)
 
 if (process.env.env_config === 'prod') {
   build_path = '../Michelinengineer/index.html'
